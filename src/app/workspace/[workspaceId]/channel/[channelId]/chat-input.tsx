@@ -15,7 +15,6 @@ export const ChatInput = ({ placeholder }: ChatInputProps) => {
     <div className="px-5 w-full">
       <Editor
         placeholder={placeholder}
-        variant="create"
         disabled={false}
         onSubmit={() => {}}
         innerRef={editorRef}
