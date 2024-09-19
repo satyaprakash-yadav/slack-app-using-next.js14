@@ -56,7 +56,7 @@ const schema = defineSchema({
   })
     .index("by_workspace_id", ["workspaceId"])
     .index("by_message_id", ["messageId"])
-    .index("by_member_id", ["memberId"]),
+    .index("by_member_id", ["memberId"])
 });
 
 export default schema;
