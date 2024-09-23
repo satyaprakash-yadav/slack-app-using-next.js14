@@ -7,9 +7,11 @@ import { GetMessagesReturnType } from "@/features/messages/api/use-get-messages"
 
 import { useWorkspaceId } from "@/hooks/use-workspace-id";
 
+import { Id } from "../../convex/_generated/dataModel";
+
 import { Message } from "./message";
 import { ChannelHero } from "./channel-hero";
-import { Id } from "../../convex/_generated/dataModel";
+import { ConversationHero } from "./conversation-Hero";
 
 interface MessageListProps {
   memberName?: string;
@@ -134,6 +136,9 @@ export const MessageList = ({
       )}
       {variant === "channel" && channelName && channelCreationTime && (
         <ChannelHero name={channelName} creationTime={channelCreationTime} />
+      )}
+      {variant === "conversation" && (
+        <ConversationHero name={memberName} image={memberImage} />
       )}
     </div>
   );
